@@ -1,0 +1,114 @@
+:root {
+    --male-gender-color: #3399ff;
+    --female-gender-color: #ff3300;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: inherit;
+    width: inherit;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    border: 5px solid;
+    border-radius: 50%;
+}
+
+h1 {
+    margin-bottom: 0%;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: none;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+#app{
+    height: inherit;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.male {
+    background-color: var(--male-gender-color);
+    border: 3px solid var(--male-gender-color);
+    transition: 0.5s ease-in;
+}
+
+button.male:hover {
+    background-color: white;
+    color: var(--male-gender-color);
+    font-weight: bold;
+}
+
+.female {
+    background-color: var(--female-gender-color);
+    border: 3px solid var(--female-gender-color);
+    transition: 0.5s ease-in;
+}
+
+button.female:hover {
+    background-color: white;
+    color: var(--female-gender-color);
+    font-weight: bold;
+}
+
+.joke-setup {
+    margin-bottom: 0%;
+    font-weight: bold;
+}
+
+.joke-button {
+    -webkit-tap-highlight-color: transparent;
+    appearance: none;
+    border-radius: 100px;
+    border: 2px solid black;
+    border: 0;
+    background-size: 300% 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: black;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.joke-button:hover {
+    background-position: 100% 0;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.joke-button:focus {
+    outline: none;
+}
+
+.joke-button {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 190, 0.75);
+}
