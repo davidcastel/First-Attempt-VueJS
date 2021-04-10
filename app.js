@@ -6,15 +6,17 @@ const app = Vue.createApp({
       email: "johnnyHS24@gmail.com",
       gender: "male",
       picture: "https://randomuser.me/api/portraits/men/10.jpg",
+      setup: "",
+      punchline: "",
     };
   },
   methods: {
     async getUser() {
       // Fetch the api
-      const res = await fetch("https://randomuser.me/api");
+      const randomUser = await fetch("https://randomuser.me/api");
 
       //   De-construct the json that we will get from the api
-      const { results } = await res.json();
+      const { results } = await randomUser.json();
 
       //   Show the JSON object, learn how the object is structured
       console.log(results);
@@ -25,6 +27,18 @@ const app = Vue.createApp({
       this.email = results[0].email;
       this.gender = results[0].gender;
       this.picture = results[0].picture.large;
+    },
+    async getJoke() {
+      const randomJoke = await fetch(
+        "https://official-joke-api.appspot.com/random_joke"
+      );
+
+      const Joke = await randomJoke.json();
+
+      console.log(Joke);
+
+      this.setup = Joke.setup;
+      this.punchline = Joke.punchline;
     },
   },
 });
